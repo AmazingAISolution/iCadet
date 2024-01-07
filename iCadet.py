@@ -26,8 +26,10 @@ def main():
             df['Q_embedding'] = df.apply(createEmbedding, axis=1)
             df['Similarity'] = df.apply(calcDist, axis=1)
             df = df.sort_values(by='Similarity', ascending=False).reset_index()
-            
-            st.success(df.loc[0,'Answer'])
+            if df.loc[0,'Similarity']<0.7:
+                st.warning('Please try another question!')
+            else:
+                st.success(df.loc[0,'Answer'])
         else:
             st.warning('Please enter a question.')
 
