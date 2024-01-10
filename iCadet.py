@@ -9,7 +9,7 @@ def main():
     st.image('mmu_logo.png', width=300)  # Replace 'your_logo.png' with the path to your logo image
     st.header('iCadet Programme')
     
-    df = pd.read_csv('iCadet_QnA.csv')
+    df = pd.read_csv('iCadet_QnA.csv', encoding="utf-8")
 
     prompt = st.text_input('Ask a question:')
     
