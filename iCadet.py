@@ -3,7 +3,7 @@ from sentence_transformers import SentenceTransformer, util
 import pandas as pd
 import numpy as np
 
-model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
+model = SentenceTransformer('sentence-transformers/all-MiniLM-L12-v2')
 
 def main():
     st.image('mmu_logo.png', width=300)  # Replace 'your_logo.png' with the path to your logo image
@@ -41,4 +41,4 @@ if __name__ == '__main__':
     st.write("")
     st.write("")
     st.write("")
-    st.write('copyright by GLIE')
+    st.write('Copyrighted by GLIE')
